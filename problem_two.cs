@@ -18,24 +18,14 @@ namespace problem_two{
             //create vector of chars for to stock each character of string validate.
             char [] validation = new char[comparation.Length];
           
-
-    
             for (int i = 0; i < message_m.Length; i++)
             {
                 validation_char.Add(message_m[i]);
             }
 
             validation_char.CopyTo(validation);
-            //Console.WriteLine("tamaño validacion: " + validation.Length);
-            
             string validation_string =  new string(validation).Trim(charsToTrim);
-            
-            //Console.WriteLine("comparacion: " + comparation);
-            bool result = string.Equals(validation_string,comparation);
-
-         
-
-            //Console.WriteLine("resultado:" + result);
+            bool result = string.Equals(validation_string,comparation);;
             if(result){
                 return true;
             }else{
